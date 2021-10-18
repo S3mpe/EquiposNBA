@@ -7,7 +7,26 @@
         mc:Ignorable="d"
         Title="EquiposNBA" Icon="starwars.ico">
     <StackPanel>
-        <Border BorderBrush="Black" BorderThickness="3" CornerRadius="3" Margin="10">
+        <StackPanel.Resources>
+            <Style TargetType="Border">
+                <Setter Property="BorderBrush" Value="Black"/>
+                <Setter Property="BorderThickness" Value="3"/>
+                <Setter Property="CornerRadius" Value="3"/>
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+            <Style TargetType="Image">
+                <Setter Property="Height" Value="100"/>
+            </Style>
+            <Style TargetType="TextBlock">
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+            </Style>
+            <Style TargetType="WrapPanel">
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+            </Style>
+        </StackPanel.Resources>
+        <Border>
             <StackPanel>
                 <StackPanel.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -15,17 +34,17 @@
                     <GradientStop Color="#FFE2D060" Offset="1"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
-            <TextBlock HorizontalAlignment="Center" FontSize="30" FontWeight="Bold">Los Ángeles Lakers</TextBlock>
-                <WrapPanel HorizontalAlignment="Center">
-                    <Image Source="/Imagenes/9_lakers.png" Height="100" />
-                    <Image Source="/Imagenes/14_lakers.png" Height="100"/>
-                    <Image Source="/Imagenes/23_lakers.png" Height="100"/>
-                    <Image Source="/Imagenes/3_lakers.png" Height="100"/>
-                    <Image Source="/Imagenes/39_lakers.png" Height="100"/>
+            <TextBlock>Los Ángeles Lakers</TextBlock>
+                <WrapPanel>
+                    <Image Source="/Imagenes/9_lakers.png"/>
+                    <Image Source="/Imagenes/14_lakers.png"/>
+                    <Image Source="/Imagenes/23_lakers.png"/>
+                    <Image Source="/Imagenes/3_lakers.png"/>
+                    <Image Source="/Imagenes/39_lakers.png"/>
                 </WrapPanel>
             </StackPanel>
         </Border>
-        <Border BorderBrush="Black" BorderThickness="3" CornerRadius="3" Margin="10">
+        <Border>
             <StackPanel>
             <StackPanel.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -33,13 +52,13 @@
                     <GradientStop Color="#FFFF0707" Offset="1"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
-            <TextBlock HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Foreground="White">Los Ángeles Lakers</TextBlock>
-                <WrapPanel HorizontalAlignment="Center">
-                    <Image Source="/Imagenes/7_heat.png" Height="100"/>
-                    <Image Source="/Imagenes/14_heat.png" Height="100"/>
-                    <Image Source="/Imagenes/22_heat.png" Height="100"/>
-                    <Image Source="/Imagenes/99_heat.png" Height="100"/>
-                    <Image Source="/Imagenes/13_heat.png" Height="100"/>
+            <TextBlock Foreground="White">Los Ángeles Lakers</TextBlock>
+                <WrapPanel>
+                    <Image Source="/Imagenes/7_heat.png"/>
+                    <Image Source="/Imagenes/14_heat.png"/>
+                    <Image Source="/Imagenes/22_heat.png" />
+                    <Image Source="/Imagenes/99_heat.png" />
+                    <Image Source="/Imagenes/13_heat.png" />
             </WrapPanel>
         </StackPanel>
         </Border>
